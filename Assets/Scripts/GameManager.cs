@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         LoadScores();
+        Debug.Log(playerName);
     }
 
     public void StartGame()
@@ -65,7 +66,8 @@ public class GameManager : MonoBehaviour
             string json = File.ReadAllText(path);
             BestScore bScore = JsonUtility.FromJson<BestScore>(json);
             bScoreText.text = "Best Score: " + bScore.score.ToString() + "\nBy: " + bScore.pName;
-
+            score = bScore.score;
+            playerName = bScore.pName;
         }
     }
 }

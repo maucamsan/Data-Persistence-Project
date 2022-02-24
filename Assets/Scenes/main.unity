@@ -584,6 +584,7 @@ MonoBehaviour:
   BestScoreText: {fileID: 2078529056}
   playerNameIn: {fileID: 465614711}
   GameOverText: {fileID: 1767098734}
+  BestScoreGO: {fileID: 465614709}
 --- !u!1 &455529321
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &465614710
 RectTransform:
   m_ObjectHideFlags: 0
@@ -676,14 +677,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465614709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224277594}
   - {fileID: 646415043}
-  m_Father: {fileID: 1767098735}
-  m_RootOrder: 1
+  m_Father: {fileID: 2137539498}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -743,7 +744,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450625942}
+        m_TargetAssemblyTypeName: MainManager, Assembly-CSharp
+        m_MethodName: SaveOnInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1618,9 +1631,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 474497239}
-  - {fileID: 465614710}
   m_Father: {fileID: 2137539498}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1799,6 +1811,7 @@ RectTransform:
   m_Children:
   - {fileID: 188020405}
   - {fileID: 2078529055}
+  - {fileID: 465614710}
   - {fileID: 1767098735}
   m_Father: {fileID: 0}
   m_RootOrder: 6
